@@ -969,9 +969,7 @@ section {
 
 .team .member .member-img {
   position: relative;
-  overflow: hidden;
- 
-  
+  overflow: hidden;  
 }
 
 .team .member .member-img:after {
