@@ -27,6 +27,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="/Join_Us/form.css">
   
 
 </head>
@@ -38,7 +39,7 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
+        <img src="assets/img/only_logo.png" alt="">
         <span>Finance Club</span>
       </a>
 
@@ -70,13 +71,70 @@
             </ul>
           </li>-->
           <li><a class="nav-link " href="#contact">Contact</a></li>
-          <li><a class="getstarted " href="#about">JOIN US</a></li>
+          <li><a class="getstarted cursor" onclick="openForm()">JOIN US</a></li>
+
+          
+
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
     </div>
   </header><!-- End Header -->
+
+  <!--pop-up join_us Form  -->
+  <div class="container form-popup scrollset" id="joinusForm">
+    <div class="container mt-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+            class="bi bi-x-circle-fill closebtn float-end" viewBox="0 0 16 16" onclick="closeForm()">
+            <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
+        </svg>
+    </div>
+    <div class="card mx-auto mt-3 logobox" style="max-width: 25rem;min-width: none;">
+        <img src="assets/img/finance_club_logo.png" alt="error" class="logo my-auto">
+    </div>
+    <div class="container card mx-auto px-5 pb-5 formbox" style="max-width: 60rem;min-width: none;">
+        <form method="post" autocomplete="off" name="google-sheet" class="row g-3 needs-validation innercontent"
+            >
+            <div class="col-md-4">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" name="Name" required>
+            </div>
+
+            <div class="col-md-4">
+                <label for="roll_no" class="form-label">Roll No.</label>
+                <input type="text" class="form-control" name="Roll No." required>
+            </div>
+            <div class="col-md-4">
+                <label for="branch" class="form-label">Branch</label>
+                <input type="text" class="form-control" name="Branch" required>
+            </div>
+            <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" name="Email" required>
+            </div>
+            <div class="col-md-6">
+                <label for="resume" class="form-label">Resume Link / Linkedin Profile Link</label>
+                <input class="form-control" type="text" name="Resume" required>
+            </div>
+            <div class="col-md-12">
+                <label for="Reason" class="form-label">Why do you wish to join the club?</label>
+                <textarea type="text" class="form-control" name="Reason for joining" required></textarea>
+            </div>
+            <div class="col-md-12">
+              <label for="Query" class="form-label">Other questions/queries if any?</label>
+              <textarea type="text" class="form-control" name="Query"></textarea>
+          </div>
+            <div class="d-grid">
+                <button class="btn btn-primary" type="submit">Apply</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+<!-- end of pop-up form -->
+
 
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
@@ -87,7 +145,7 @@
             <h1 data-aos="fade-up">Finance Club <br> Bit Mesra</h1>
             <h2 data-aos="fade-up" data-aos-delay="400">UNLEASH THE CORPORATE TYCOON WITHIN YOU</h2>
             <div class="d-flex">
-              <a href="#about" class="btn-get-started scrollto">JOIN US</a>
+              <a onclick="openForm()" class="btn-get-started scrollto cursor">JOIN US</a>
 			  
 			  <!--====== popup vdo section========-->
 			  <div id="light">
@@ -736,8 +794,8 @@
                 <div class="info-box">
                   <i class="bi bi-telephone"></i>
                   <h3>Call Us</h3>
-                  <strong>Suyash Bhagat<br>(President):</strong><br><a href="tel: +917835877316">+917835877316</a><br><br>
-                  <strong>Deval Tripathi<br>(Vice-President):</strong><br><a href="tel: +917485813826">+917485813826</a><br>
+                  <strong>Tanay Goel<br>(President):</strong><br><a href="tel: +917607073910">+917607073910</a><br><br>
+                  <strong>Arpit<br>(President):</strong><br><a href="tel: +919570099779">+919570099779</a><br>
                 </div>
               </div>
               <div class="col-md-6">
@@ -854,7 +912,7 @@
               BIT MESRA <br>
               Ranchi,<br>
               Jharkhand <br><br>
-              <strong>Phone:</strong> Deval Tripathi (Vice-President):<br><a href="tel: +91 7485813826">+91 7485813826</a> <br>
+              <strong>Phone:</strong> Tanay Goel (President):<br><a href="tel: +91 76070 73910">+91 76070 73910</a> <br>
               <strong>Email: </strong><a href="mailto:financeclub@bitmesra.ac.in">financeclub@bitmesra.ac.in</a><br>
             </p>
 
@@ -882,7 +940,8 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min"></script>  
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-
+  <script src="/Join_Us/form.js"></script>
+  
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
